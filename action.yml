@@ -4,7 +4,7 @@ inputs:
   command:
     description: "'transform' or 'calculate'"
   scan-args:
-    description: "Arguments to spha-cli, separated by new line. 
+    description: "Arguments to spha-cli, separated by new line."
     default: |-
       --help
 runs:
