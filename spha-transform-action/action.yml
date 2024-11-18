@@ -2,8 +2,12 @@ name: "spha-cli"
 description: "Action to run the SPHA command line tool."
 inputs:
   tool:
+    description: "Tool Name"
   inputFile:
+    description: "Path to input file"
   output:
+    description: "Path to output file"
+    default: kpis.json
 
 runs:
   using: "docker"
