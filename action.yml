@@ -7,6 +7,6 @@ inputs:
       --help
 runs:
   using: "docker"
-  image: "docker://ghcr.io/fraunhofer-iem/spha-cli@latest"
+  image: "docker://ghcr.io/fraunhofer-iem/spha-cli:latest"
   args:
     - ${{ inputs.scan-args }}
