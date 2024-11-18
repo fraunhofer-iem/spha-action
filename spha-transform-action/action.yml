@@ -1,0 +1,15 @@
+name: "spha-cli"
+description: "Action to run the SPHA command line tool."
+inputs:
+  tool:
+  inputFile:
+  output:
+
+runs:
+  using: "docker"
+  image: "docker://ghcr.io/fraunhofer-iem/spha-cli:latest"
+  args:
+    - transform
+    - --tool ${{ inputs.tool }}
+    - --inputFile ${{ inputs.inputFile }}
+    - --output ${{ inputs.output }}
