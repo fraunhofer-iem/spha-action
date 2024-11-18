@@ -1,12 +1,15 @@
 name: "spha-cli"
 description: "Action to run the SPHA command line tool."
 inputs:
+  command:
+    description: "'transform' or 'calculate'"
   scan-args:
-    description: "Arguments to spha-cli, separated by new line. First argument must be a valid command ('transform' or 'calculate')"
+    description: "Arguments to spha-cli, separated by new line. 
     default: |-
       --help
 runs:
   using: "docker"
   image: "docker://ghcr.io/fraunhofer-iem/spha-cli:latest"
   args:
+    - ${{ inputs.command }}
     - ${{ inputs.scan-args }}
