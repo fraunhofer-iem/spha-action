@@ -9,7 +9,7 @@ runs:
   using: "docker"
   image: "docker://ghcr.io/fraunhofer-iem/spha-cli:latest"
   args:
-    - transform
-    - --tool ${{ inputs.tool }}
-    - --inputFile ${{ inputs.inputFile }}
-    - --output ${{ inputs.output }}
+    - "transform"
+    - "--tool ${{ inputs.tool }}"
+    - "--inputFile ${{ inputs.inputFile }}"
+    - "--output ${{ inputs.output }}"
