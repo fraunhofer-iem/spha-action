@@ -1,9 +1,6 @@
 name: "spha-cli"
 description: "Action to run the SPHA command line tool."
 inputs:
-  version:
-    description: "SPHA CLI version to use"
-    default: latest
   args:
     description: "Arguments to pass to the SPHA CLI (e.g., 'analyze --toolResultDir . --output kpis.json')"
     required: true
@@ -11,6 +8,6 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://ghcr.io/fraunhofer-iem/spha/cli:${{ inputs.version }}"
+  image: "docker://ghcr.io/fraunhofer-iem/spha/cli:0.6.0"
   args:
     - ${{ inputs.args }}
